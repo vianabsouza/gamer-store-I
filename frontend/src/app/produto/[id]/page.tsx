@@ -1,6 +1,8 @@
-import { produtos } from "@/core"
+'use client'
+import useProdutos from "@/data/hooks/useProdutos"
 
 export default function PaginaProduto(props: any) {
+  const { produtos} = useProdutos()
   const id = +props.params.id
   const produto = produtos.find(produto => produto.id === id)
 
